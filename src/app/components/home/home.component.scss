@@ -1,0 +1,32 @@
+.stopka{
+  text-align: center;
+  background-color: #204051;
+  color:white;
+  padding: 5px 0px;
+}
+#right{
+  background-color: #84a9ac;
+  text-align: right;
+  font-size: 30px;
+}
+.contactMenu{
+  margin-left:6px;
+  color: black;
+}
+.contactMenu::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2D3047;
+  transition: width .3s;
+  text-decoration: none;
+}
+.contactMenu:hover{
+  text-decoration: none;
+  color: black;
+}
+.contactMenu:hover::after{
+  width: 100%;
+  transition: width .3s;
+}

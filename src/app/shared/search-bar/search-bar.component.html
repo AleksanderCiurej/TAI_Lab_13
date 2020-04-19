@@ -1,9 +1,12 @@
-<input
-  [(ngModel)]="filterText"
-  (ngModelChange)="sendFilter()"
-  placeholder="Wpisz nazwę..."
-  id="search"
-  type="search"
-  class="form-control"
-  textFormat
-/>
+<div>
+  <h3>Wyszukiwanie po ID postu</h3>
+  <input
+    [(ngModel)]="filterText"
+    (ngModelChange)="sendFilter()"
+    placeholder="Wpisz nazwę..."
+    id="search"
+    type="search"
+    class="form-control"
+    textFormat
+  />
+</div>

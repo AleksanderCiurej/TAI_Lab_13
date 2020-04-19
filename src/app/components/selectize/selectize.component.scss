@@ -1,0 +1,14 @@
+input{
+  width:100%;
+}
+li a{
+  text-decoration: none;
+  color:black;
+  font-size:15px;
+}
+li a:hover{
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+

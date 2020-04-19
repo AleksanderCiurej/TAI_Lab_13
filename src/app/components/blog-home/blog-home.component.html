@@ -1,4 +1,15 @@
-<search-bar (name)="getName($event)">
-</search-bar>
-<blog [filterText]="filterText">
-</blog>
+<div id="mainBlogHome">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <selectize></selectize>
+      </div>
+      <div class="col-6">
+        <search-bar (name)="getName($event)">
+        </search-bar>
+      </div>
+    </div>
+  </div>
+  <blog [filterText]="filterText">
+  </blog>
+</div>
