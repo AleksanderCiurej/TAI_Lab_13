@@ -47,10 +47,18 @@ async function createNewOrUpdate(data) {
   });
 }
 
+async function search(content) {
+  return PostModel.find(content).then(function (result) {
+    if (result) {
+      return mongoConverter(result);
+    }
+  });
+}
+
 export default {
   query: query,
   get: get,
   createNewOrUpdate: createNewOrUpdate,
-
+  search: search,
   model: PostModel
 };
