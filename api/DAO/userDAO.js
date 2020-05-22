@@ -21,16 +21,17 @@ const userSchema = new mongoose.Schema({
   active: { type: Boolean, default: false, required: false },
   isAdmin: { type: Boolean, default: false, required: false }
 }, {
-  collection: 'eb_user'
+  collection: 'ac_user'
 });
 
 userSchema.plugin(uniqueValidator);
 
-const UserModel = mongoose.model('dp_user', userSchema);
+const UserModel = mongoose.model('ac_user', userSchema);
 
 function createNewOrUpdate(user) {
   return Promise.resolve().then(() => {
     if (!user.id) {
+      user.active = true;
       return new UserModel(user).save().then(result => {
         if (result) {
           return mongoConverter(result);
