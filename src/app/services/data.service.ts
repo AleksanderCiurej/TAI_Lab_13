@@ -6,7 +6,7 @@ export class DataService {
 
   private url = 'http://localhost:8080';
 
-    constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getAll() {
     return this.http.get(this.url + '/api/posts/');
@@ -23,5 +23,10 @@ export class DataService {
   createOrUpdate(post) {
     return this.http.post(`${this.url}/api/posts/`, post);
   }
+
+  createPost(data) {
+    return this.http.post(`${this.url}/posts`, { data: JSON.stringify(data) });
+  }
+
 
 }
