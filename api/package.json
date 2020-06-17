@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app/index.js",
-    "run app": "node_modules/.bin/nodemon app"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run app": "node_modules/.bin/nodemon app",
+    "start": "node index.js"
   },
   "author": "Aleksander Ciurej",
   "license": "ISC",
@@ -23,10 +24,11 @@
     "mongoose": "5.9.12",
     "mongoose-unique-validator": "2.0.3",
     "morgan": "^1.10.0",
-    "sha1": "^1.1.1"
+    "sha1": "^1.1.1",
+    "bluebird": "^3.7.2"
   },
   "devDependencies": {
-    "bluebird": "^3.7.2",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "bluebird": "^3.7.2"
   }
 }

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {JwtHelper} from 'angular2-jwt';
 import {map} from 'rxjs/operators';
 import {Token} from '../models/token';
@@ -7,7 +7,7 @@ import {Token} from '../models/token';
 @Injectable()
 export class AuthService {
 
-  private url = 'http://localhost:3000/api';
+  private url = 'https://ac-tai.herokuapp.com/api';
 
   constructor(private http: HttpClient) {
   }
