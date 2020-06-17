@@ -1,10 +1,21 @@
 package com.example.demo.post;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Post {
-    private long id;
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String title;
     private String url;
     private String content;
+
+    public Post(){
+    }
 
     public Post(long id, String title, String url, String content) {
         this.id = id;
